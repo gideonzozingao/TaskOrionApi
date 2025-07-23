@@ -15,29 +15,7 @@ import { User } from 'src/users/entities/user.entity';
 import { Task } from 'src/tasks/entities/task.entity';
 import { ProjectCategory } from 'src/projectcategory/entities/projectcategory.entity';
 import { ProjectStatus, ProjectPriority, ProjectVisibility } from 'src/types';
-// export enum ProjectStatus {
-//   PLANNING = 'planning',
-//   ACTIVE = 'active',
-//   ON_HOLD = 'on_hold',
-//   COMPLETED = 'completed',
-//   CANCELLED = 'cancelled',
-//   ARCHIVED = 'archived',
-// }
-
-// export enum ProjectPriority {
-//   LOW = 'low',
-//   MEDIUM = 'medium',
-//   HIGH = 'high',
-//   URGENT = 'urgent',
-//   CRITICAL = 'critical',
-// }
-
-// export enum ProjectVisibility {
-//   PUBLIC = 'public',
-//   PRIVATE = 'private',
-//   INTERNAL = 'internal',
-// }
-
+import { Team } from 'src/teams/entities/team.entity';
 @Entity('projects')
 @Index(['name'])
 @Index(['status'])
@@ -195,6 +173,14 @@ export class Project {
   @OneToMany(() => Project, (project) => project.parentProject)
   subProjects: Project[];
 
+  @ManyToOne(() => Team, (team) => team.projects, {
+    onDelete: 'CASCADE',
+  })
+  @JoinColumn({ name: 'teamId' })
+  team: Team;
+
+  @Column()
+  teamId: string;
   // Virtual properties
   get isActive(): boolean {
     return this.status === ProjectStatus.ACTIVE;

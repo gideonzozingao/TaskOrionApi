@@ -11,6 +11,11 @@ import { ProjectcategoryModule } from './projectcategory/projectcategory.module'
 import { CommentModule } from './comment/comment.module';
 
 import { JwtAuthGuard } from './authentication/guards/jwt-auth.guard';
+import { PermissionsModule } from './permissions/permissions.module';
+import { RolesModule } from './roles/roles.module';
+import { RolepermissionsModule } from './rolepermissions/rolepermissions.module';
+import { OrganizationModule } from './organization/organization.module';
+import { TeamsModule } from './teams/teams.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -33,6 +38,11 @@ import { JwtAuthGuard } from './authentication/guards/jwt-auth.guard';
     TodosModule,
     ProjectcategoryModule,
     CommentModule,
+    PermissionsModule,
+    RolesModule,
+    RolepermissionsModule,
+    OrganizationModule,
+    TeamsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

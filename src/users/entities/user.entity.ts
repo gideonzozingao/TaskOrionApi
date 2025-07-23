@@ -12,6 +12,7 @@ import {
 import { Project } from 'src/projects/entities/project.entity';
 import { Task } from 'src/tasks/entities/task.entity';
 import { Comment } from 'src/comment/entities/comment.entity';
+import { Role } from 'src/roles/entities/role.entity';
 
 export enum UserRole {
   ADMIN = 'admin',
@@ -148,6 +149,13 @@ export class User {
   @OneToMany(() => Comment, (comment) => comment.author)
   comments: Comment[];
 
+  @ManyToMany(() => Role, (role) => role.users)
+  @JoinTable({
+    name: 'user_roles',
+    joinColumn: { name: 'user_id', referencedColumnName: 'id' },
+    inverseJoinColumn: { name: 'role_id', referencedColumnName: 'id' },
+  })
+  roles: Role[];
   // Virtual properties
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
