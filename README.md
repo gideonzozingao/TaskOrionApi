@@ -111,4 +111,4 @@ This step-by-step approach ensures me to build a **robust, real-world API** wh
   - Add Projects and task and all per team.or individual
   
   ### Front End and Client
-  - Build a Client or UI with Nest Js and intgegrate with the API service
+  - Build a Frontend  Client or UI with Nest Js and intgegrate with the API service
