@@ -2,11 +2,11 @@
 
 ## TaskOrion API services with Nest.js
 
-# Project Outline and Feature
+### Project Outline and Feature
 
-This **Task Manager API** project is designed to help me master the core features of NestJS in a practical, hands-on way.
+This **TaskOrionAPI** project is designed to help me master the core features of NestJS in a practical, hands-on way.
 
-## Main Modules
+### Main Modules
 
 - **Authentication Module**: Handles user registration, login, and JWT-based authentication.
 - **Users Module**: Manages user profile data (optional but good practice).
