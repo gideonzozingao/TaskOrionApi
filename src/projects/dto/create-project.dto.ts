@@ -8,12 +8,7 @@ import {
   IsUUID,
   IsArray,
 } from 'class-validator';
-import {
-  ProjectPriority,
-  ProjectStatus,
-  ProjectVisibility,
-} from '../entities/project.entity';
-
+import { ProjectStatus, ProjectPriority, ProjectVisibility } from 'src/types';
 export class CreateProjectDto {
   @IsString()
   name: string;
