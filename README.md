@@ -33,12 +33,12 @@ This **TaskOrionAPI** project is designed to help me master the core features 
 
 ## 1. **Project Initialization**
 
-- Scaffold a new project: **`nest new task-manager`**
-- Install dependencies: TypeORM/Prisma, class-validator, passport, JWT packages
+- Scaffold a new project: **`nest new TaskOrionApi`**
+- Install dependencies: TypeORM, class-validator, passport, JWT packages
 
 ## 2. **Database Setup**
 
-- Set up your ORM (TypeORM or Prisma) and PostgreSQL (or SQLite for quick testing)
+- Set up your ORM (TypeORM ) and PostgreSQL 
 - Create basic User and Task entities/models
 
 ## 3. **Authentication Module**
@@ -101,3 +101,14 @@ This **TaskOrionAPI** project is designed to help me master the core features 
 10. Final touches: testing, enhancements, code cleanup
 
 This step-by-step approach ensures me to build a **robust, real-world API** while covering all of NestJS’s core concepts.# TaskOrionApi
+
+
+##  Next Step
+
+ ### Build Advanced API services Fetures
+  - Comments  and Task Enditing   and Progress History
+  - Build Teams and Impplement team Members Onboarding 
+  - Add Projects and task and all per team.or individual
+  
+  ### Front End and Client
+    - Build a Client or UI with Nest Js and intgegrate with the API service
